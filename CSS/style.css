@@ -2,7 +2,7 @@
 
 :root{
     --primary-color:rgb(255, 228, 106);
-    /* -- pour settings customisÃ©s*/
+    /* -- pour settings customisés*/
 }
 
  *{
@@ -67,7 +67,7 @@
  /*NAVBAR*/
  .navbar {
      background: rgba(255, 247, 191, 0);
-     /* var(--primary-color) utilise la primary color customisÃ©e dÃ©f dans root tout en haut*/
+     /* var(--primary-color) utilise la primary color customisée déf dans root tout en haut*/
      height: 100px; 
      background-repeat:no-repeat;
     background-size:cover;
@@ -84,7 +84,7 @@
      padding: 10px;
      margin : 5 0; 
      /* pour Projets Actus et A propos, couleur espaces entre
-     et marges : haut cÃ´tÃ©s; */
+     et marges : haut côtés; */
  }
 
  .navbar a:hover{
@@ -95,9 +95,9 @@
 .navbar .flex {
     overflow: visible;
     justify-content: space-between;
-     /* pour mettre les Ã©lÃ©ments spÃ©cifiques de navbar flex de 
-     chaque cÃ´tÃ© du container (overrides flex tout seul qui est
-     plus gÃ©nÃ©ral */
+     /* pour mettre les éléments spécifiques de navbar flex de 
+     chaque côté du container (overrides flex tout seul qui est
+     plus général */
 }
 
 
@@ -122,8 +122,8 @@
  .flex {
      display: flex;
      justify-content: center;
-     /* pour mettre les Ã©lÃ©ments de flex de 
-     chaque cÃ´tÃ© du container */
+     /* pour mettre les éléments de flex de 
+     chaque côté du container */
      align-items: center;
      height: 100%;
      /* soit 100% de la taille du container */
@@ -131,7 +131,7 @@
  /*fin consignes navbar*/
 
 
-/*corriger + tard, h1 s'applique Ã  la fois Ã  "logo" Marianne T qu'aux projets */
+/*corriger + tard, h1 s'applique à la fois à "logo" Marianne T qu'aux projets */
 
 /* GRILLE PROJETS 1 GRID 
 .grid {
@@ -146,7 +146,7 @@
 }
 /* max-width=largeur grille = 
 3*250 items + 2*20gaps = 790px 
-reste pb avec le bord du bas de chaque item, Ã  verif*/
+reste pb avec le bord du bas de chaque item, à verif*/
 /*
 .grid-item {
     width: 250px;
@@ -301,7 +301,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;
 object-fit: cover;}
-/*ci-dessus Ã§a marche pour les icones patate !*/
+/*ci-dessus ça marche pour les icones patate !*/
 
 
 

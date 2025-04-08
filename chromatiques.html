@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <!--defines the size to be adapted according to the device-->
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Chromatiques</title>
+</head>
+
+<body>
+    <!-- BARRE MENU HAUT-->
+    <div class="navbar">
+        <div class="navContainer flex">
+            <!--flexbox définie dans css, "container" tout seul fonctionne aussi-->
+            <h1 class="logo">Marianne Thibault</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Projets</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+        <div class="bodyContainer">
+            <div class="slideshow-container">
+    
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="Images/Projet images/Chromatiques/01.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="Images/Projet images/Chromatiques/02.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="Images/Projet images/Chromatiques/03.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+        <div class="title"> Chromatiques</div> 
+        <div class="undertitle"> Installation, 2019 </div>
+        <div class="text"> Cette boîte est une archive informatique. En 2017, j’ai écrit Chromatiques, un programme capable de transcrire des fichiers audio en séquences colorées en fonction de leurs fréquences. Cette expérience m’a permis de matérialiser une perception synesthésique des sons et des notes de musique, de figer quelque chose de volatile: les sons graves sont plus bleus, les sons aigus plus jaunes... J’ai ensuite appliqué mon programme à quatre extraits de paroles de peintres décédés, comme si les traces qu’ils avaient laissées sur Internet permettaient de produire une extension de leur activité créatrice jusque dans le présent.
+              <br> En 2019, voulant réutiliser ce programme, j’ai réalisé qu’il était déjà obsolète en raison des trop nombreuses mises à jour et autres évolutions techniques apparues en seulement deux ans. J’ai donc rassemblé toutes ses traces encore existantes; images générées, sources des fichiers sonores, code complet et instructions, et j’ai conservé le tout dans une boîte, en vue du temps futur où quelqu’un, peut-être, trouvera une nouvelle manière de le réactiver.</div>
+    </div>
+
+
+</body>

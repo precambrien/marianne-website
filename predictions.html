@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <!--defines the size to be adapted according to the device-->
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Prédictions</title>
+</head>
+
+<body>
+    <!-- BARRE MENU HAUT-->
+    <div class="navbar">
+        <div class="navContainer flex">
+            <!--flexbox définie dans css, "container" tout seul fonctionne aussi-->
+            <h1 class="logo">Marianne Thibault</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Projets</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="bodyContainer">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="Images/Projet images/Prédictions/01.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="Images/Projet images/Prédictions/02.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="Images/Projet images/Prédictions/03.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+        <div class="title"> Prédictions</div> 
+        <div class="undertitle"> Éditions papier, 2020 </div>
+        <div class="text">Saisies prédictives capturées depuis le Google Board de mon téléphone portable et mises en forme de poèmes. Le vocabulaire déjà présent dans la mémoire du téléphone, et sa mise à jour en fonction des utilisations, en font une sorte de réserve de vocabulaire inutilisé, comme un inconscient collectif. La démarche de saisie de poèmes en suivant le fil de cet inconscient ressemble aux procédés dadaïstes ou encore aux expérimentations de l’OuLiPo, qui cherchaient à inhiber la réflexion personnelle ou sentimentale au profit de contraintes de vitesse ou d’algorithmes.</div>
+    </div>
+
+
+</body>
