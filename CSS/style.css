@@ -1,3 +1,134 @@
+/* Ajouts Gabi */
+
+/* body { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     background: linear-gradient(90deg, #FFB800, #FFD500); */
+/*     overflow-x: hidden; */
+/* } */
+
+/* #menu { */
+/*     position: relative; */
+/*     width: 100vw; */
+/*     height: 100vh; */
+/* } */
+
+/* /1* Menu item styling *1/ */
+/* .menu-item { */
+/*     position: absolute; */
+/*     font-size: 2.5rem; */
+/*     text-decoration: none; */
+/*     transition: transform 0.3s; */
+/* } */
+
+/* .menu-item:hover { */
+/*     text-decoration: underline; */
+/* } */
+
+/* /1* Random placement for a messy look *1/ */
+/* #item1 { top: 12%; left: 25%; } */
+/* #item2 { top: 35%; left: 55%; } */
+/* #item3 { top: 62%; left: 12%; } */
+/* #item4 { top: 52%; left: 78%; } */
+/* #item5 { top: 80%; left: 35%; } */
+/* #item6 { top: 17%; left: 73%; } */
+
+/* /1* Responsive adjustments *1/ */
+/* @media (max-width: 768px) { */
+/*     .menu-item { */
+/*         font-size: 1.5rem; */
+/*     } */
+/*     #item1 { top: 10%; left: 10%; } */
+/*     #item2 { top: 25%; left: 30%; } */
+/*     #item3 { top: 45%; left: 20%; } */
+/*     #item4 { top: 55%; left: 60%; } */
+/*     #item5 { top: 75%; left: 40%; } */
+/*     #item6 { top: 20%; left: 50%; } */
+/* } */
+/* ---------------------------------->   Fin ajout gabi */
+
+
+/* --------------------------------------> Ajout gabi font specific */
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Monoton&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #FFB800, #FFD500);
+    font-family: 'Catamaran', sans-serif;
+    overflow-x: hidden;
+}
+
+#menu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Menu items styling with individual fonts and sizes */
+#item1 {
+    position: absolute;
+    top: 12%; left: 25%;
+    font-family: 'Monoton', cursive;
+    font-size: 3.5rem;
+}
+
+#item2 {
+    position: absolute;
+    top: 35%; left: 55%;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+#item3 {
+    position: absolute;
+    top: 62%; left: 12%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+#item4 {
+    position: absolute;
+    top: 52%; left: 78%;
+    font-family: 'Monoton', cursive;
+    font-size: 4rem;
+}
+
+#item5 {
+    position: absolute;
+    top: 80%; left: 35%;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+}
+
+#item6 {
+    position: absolute;
+    top: 17%; left: 73%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+/* Hover effect */
+.menu-item:hover {
+    transform: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #item1 { font-size: 2rem; }
+    #item2 { font-size: 1.8rem; }
+    #item3 { font-size: 1.5rem; }
+    #item4 { font-size: 2.5rem; }
+    #item5 { font-size: 1.6rem; }
+    #item6 { font-size: 1.4rem; }
+}
+
+
+/* --------------------------------------> Ajout gabi font specific */
+
+
+
  @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200&display=swap" rel="stylesheet');
 
 :root{
