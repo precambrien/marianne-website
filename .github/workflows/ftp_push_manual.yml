@@ -1,4 +1,4 @@
-name: Deploy via FTP
+name: Deploy via FTP (manual)
 
 on:
   workflow_dispatch:  # déploiement manuel depuis l'onglet "Actions"
