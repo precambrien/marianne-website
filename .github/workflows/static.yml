@@ -1,0 +1,25 @@
+name: Deploy via FTP
+
+on:
+  workflow_dispatch:  # déploiement manuel depuis l'onglet "Actions"
+
+jobs:
+  ftp-deploy:
+    name: Upload website via FTP
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Upload to FTP server
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # répertoire à envoyer (racine du repo)
+          server-dir: ${{ secrets.FTP_PATH }}
+          protocol: ftp
+          exclude: |
+            **/.git*
+            **/.git*/**   
