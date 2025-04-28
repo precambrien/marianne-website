@@ -1,103 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <!--defines the size to be adapted according to the device-->
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Marianne Thibault</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos</title>
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
-    <!-- BARRE MENU HAUT-->
-    <div class="navbar">
-        <div class="navContainer flex">
-            <!--flexbox définie dans css, "container" tout seul fonctionne aussi-->
-            <h1 class="logo">Marianne Thibault</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Projets</a></li>
-                    <li><a href="actualites.html">Actualités</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
-                </ul>
-            </nav>
+<!-- <body style="background: url('your-background-image.jpg') no-repeat center center fixed; background-size: cover;"> -->
+<body style="background: linear-gradient(to bottom, #fbb7f1, #ff0c0f) no-repeat center center fixed; background-size: cover;">
+
+  <h1>À PROPOS</h1>
+  <nav class="navigation">
+    <div class="nav-left font-menu">
+      <a href="projets.html">Projets</a><br>
+      <a href="actualites.html">Actualités</a>
+    </div>
+    <div class="nav-right">
+      <a href="#">Télécharger le portfolio</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="item">
+      <div class="section-title font1">Expositions</div>
+      <div class="whitebox">
+        Small Talk, performance. <em>Arcadian Field festival, Irlande</em>, 2019.<br><br>
+        <strong>Suburban Nowheres</strong>, conférence. <em>Université d'Anvers</em>.<br><br>
+        <strong>Under Pressure</strong>, exposition collective. <em>Galerie Hervé Bize, Nancy</em>, 2019.
+
+        <button class="plus">+</button>
+
+        <div class="extra">
+          <br><strong>Extra exposition 1</strong><br>
+          <strong>Extra exposition 2</strong><br>
         </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="section-title font2">Performances</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+
+        <button class="plus">+</button>
+
+        <div class="extra">
+          <br><strong>Extra performance 1</strong><br>
+          <strong>Extra performance 2</strong><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="section-title font3">Residences</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+
+        <button class="plus">+</button>
+
+        <div class="extra">
+          <br><strong>Extra performance 1</strong><br>
+          <strong>Extra performance 2</strong><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="section-title font4">Articles</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+
+        <button class="plus">+</button>
+
+        <div class="extra">
+          <br><strong>Extra performance 1</strong><br>
+          <strong>Extra performance 2</strong><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="section-title font5">CV</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+
+        <button class="plus">+</button>
+
+        <div class="extra">
+          <br><strong>Extra performance 1</strong><br>
+          <strong>Extra performance 2</strong><br>
+        </div>
+      </div>
     </div>
 
 
-<div id="menu">
-    <div class="menu-item" id="item1">Expositions</div>
-    <div class="menu-item" id="item2">Performances</div>
-    <div class="menu-item" id="item3">Résidences</div>
-    <div class="menu-item" id="item4">CV</div>
-    <div class="menu-item" id="item5">Diplôme</div>
-    <div class="menu-item" id="item6">Articles</div>
-    <div class="menu-item" id="item7">Contact</div>
-    </div>
-</div>
-
-<script src="script.js"></script>
-
-
-    <div class="bodyContainer almendra">
-        <p> <br> <br> <br>
-            2022 &nbsp; &nbsp; &thinsp; <i>Le sens du vent</i>, curation d'exposition collective à la galerie Héloïse, Paris 
-            <br>
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <u><a href="https://www.cnap.fr/le-sens-du-vent" target="_blank"><i>Article sur le site du Cnap</i></a></u>
-            <br/><br/>
-            2021 &nbsp; &nbsp; &nbsp;<i>bientôt: ici : ailleurs</i>, Performance dans l'espace public. <u><a href="https://www.opn-space.com/2021/07/15/territoire-5/" target="_blank">Territoire#5</a></u>, Nancy.
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Dissolution</i>, exposition collective.
-            Vedanza Studio, Luxembourg
-            <br/><br/>
-            2020 &nbsp; &nbsp; &nbsp;<i>Poésie Liquide #2</i>, performance. Théâtre de verdure, Montreuil
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Passif office</i>, exposition collective.
-            École offshore, Shanghai
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i> Poésie Liquide #1</i>, résidence artistique.
-            Zaoum, Clermont-Ferrand
-            <br /><br/>
-            2019 &nbsp; &nbsp; &nbsp;<i>Portes ouvertes</i>, exposition collective. Belgium Kitchen, Bruxelles
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <i>Célébration</i>, exposition collective. ENSAD
-            Nancy
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i>Vernissage</i>, exposition collective. Théâtre
-            Universitaire, Nancy
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &thinsp;<i>Small Talk</i>, performance. Arcadian Field
-            festival, Irlande
-            <br /><br />
-            2018 &nbsp; &nbsp; &nbsp;Suburban Nowheres, conférence. Université d'Anvers
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &thinsp; &nbsp;<i>Under Pressure</i>, exposition collective.
-            Galerie Hervé Bize, Nancy
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &thinsp;<i>Suburban Creatives</i>, conférence. European
-            Associaiton for Urban History, Rome
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i>Opere Destitorum</i>, exposition collective. ENSAD, Nancy
-            <br /><br />
-            2017 &nbsp; &nbsp; &nbsp;<i>Éire Saór</i>, projection vidéo. Bellurgan Park, Irlande
-            <br /><br />
-            2016 &nbsp; &nbsp; &nbsp;<i>Molitor</i>, exposition collective. Centre Culturel André Malraux, Nancy
-            <br /><br />
-            <br /><br />
-            2019 &nbsp; &nbsp; &nbsp;DNSEP, ENSAD Nancy, félicitations du jury<br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &thinsp; &nbsp;&nbsp; Master Histoire et Civilisations Comparées,
-            Paris Diderot
-            <br /><br />
-            2017 &nbsp; &nbsp; &nbsp; DNAP, ENSAD Nancy, félicitations du jury <br />
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Licence Etudes Culturelles, Université de Lorraine
-            <br /><br />
-            <br /><br />
-            contact.mariannethibault@gmail.com
-        </p>
+    <div class="item">
+      <div class="section-title font6">Diplomes</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+      </div>
     </div>
 
+    <div class="item">
+      <div class="section-title font1">Contact</div>
+      <div class="whitebox">
+        Dissolution, exposition collective. <em>Vedanza Studio, Luxembourg</em>, 2021.<br><br>
+        Poésie Liquide #2, performance. <em>Théâtre de verdure, Montreuil</em>, 2020.<br><br>
+        Passif office, exposition collective. <em>École offshore, Shanghai</em>.
+      </div>
+    </div>
+
+  </div>
+
+  <script src="CSS/script.js"></script>
 
 </body>
+</html>
