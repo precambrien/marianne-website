@@ -371,7 +371,7 @@ h1 {
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 3em;
+  gap: 0.5em;
 }
 
 .photo {
