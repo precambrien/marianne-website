@@ -326,36 +326,19 @@ h1 {
 /* ============================================================================== */
 /*                       IMAGES ON HOVER FOR MESSY ITEMS                          */
 /* ============================================================================== */
-/* Hide the hover images by default */
-/* .hover-image { */
-/*   display: none; */
-/*   width: 100%; */
-/*   max-width: 400px; */
-/*   margin-top: 0.5rem; */
-/* } */
-
-/* /1* Show the hover image when hovering over the whole item *1/ */
-/* .item:hover .hover-image { */
-/*   display: block; */
-/* } */
-
-/* A Demander : transition ? */
-
-Hide the hover images by default
+/* Hide the hover images by default */ 
 .hover-image {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  display: none;
   width: 100%;
+  max-width: 400px;
   margin-top: 0.5rem;
 }
 
 /* Show the hover image when hovering over the whole item */
 .item:hover .hover-image {
-  max-height: 500px;
-  opacity: 1;
+  display: block;
 }
+
 
 
 /* ============================================================================== */
