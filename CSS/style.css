@@ -59,6 +59,94 @@
   font-weight: normal;
   font-style: normal;
 }
+/* FONTS */
+.font-title {
+  font-family: 'Sinistre', cursive;
+  font-size: 6rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #0011ff;
+}
+.font-menu {
+  font-family: 'isenheim', cursive;
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke: 1px #0011ff;
+}
+.font1 {
+  font-family: 'Almendra', fantasy;
+  font-size: 3.8rem;
+}
+.font2 {
+  font-family: 'Amiamie', serif;
+  font-size: 4.4rem;
+}
+.font3 {
+  font-family: 'Anthony', serif;
+  font-size: 4rem;
+}
+.font4 {
+  font-family: 'roberte', serif;
+  font-size: 3.5rem;
+}
+.font5 {
+  font-family: 'Scribble-Fill', serif;
+  font-size: 5.5rem;
+}
+.font6 {
+  font-family: 'FranklintheGoth', serif;
+  font-size: 5rem;
+}
+
+/* =============================== */
+/* CRAZY : font effects for stretch scale  */
+/* =============================== */
+
+/* 1. Wide — Stretch horizontally */
+.crazy-wide {
+  transform: scaleX(1.5) scaleY(1);
+}
+
+/* 2. Tall — Stretch vertically */
+.crazy-tall {
+  transform: scaleX(1) scaleY(1.5);
+}
+
+/* 3. Crazy — Wild wide and a bit flat */
+.crazy-wild {
+  transform: scaleX(2) scaleY(0.7);
+}
+
+/* ==================== */
+/* RESPONSIVE ADJUSTMENT */
+/* ==================== */
+@media (max-width: 768px) {
+  .crazy-wide,
+  .crazy-tall,
+  .crazy-wild {
+    transform: scaleX(1.1) scaleY(1.1); /* So it's less broken on small screens */
+  }
+}
+
+/* =============================== */
+/* CRAZY CONTAINER FOR DISTORTIONS */
+/* =============================== */
+
+.crazy-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding: 0 0;
+}
+
+/* Optional: Make sure content inside doesn't overflow horribly */
+.crazy-container * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* General settings */
 body {
   margin: 0;
@@ -72,13 +160,8 @@ body {
 /*                    */
 
 h1 {
-  font-family: 'Sinistre', cursive;
-  font-size: 6rem;
-  /* transform: scaleX(3); */
-  color: transparent;
-  -webkit-text-stroke: 2px #0011ff;
   text-align: center;
-  /* margin: 0em 5em; */
+  margin: 0;
 }
 
 /*                    */
@@ -89,14 +172,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 1em 1em;
+  margin: 0em 7em;
   flex-wrap: wrap; /* allow wrap for mobile */
 }
 
 .nav-left {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
 }
 
 .nav-right {
@@ -137,7 +219,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 5em;
+  gap: 3em;
   padding: 5em;
 }
 
@@ -149,31 +231,31 @@ h1 {
 
 /* MESSY MARGINS on each item */
 .item:nth-child(1) {
-  margin-top: -20px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 .item:nth-child(2) {
-  margin-top: 30px;
+  margin-top: -40px;
   margin-left: -15px;
 }
 .item:nth-child(3) {
-  margin-top: -10px;
-  margin-left: 20px;
+  margin-top: 5px;
+  margin-left: 25px;
 }
 .item:nth-child(4) {
-  margin-top: 25px;
-  margin-left: -10px;
+  margin-top: 80px;
+  margin-left: -40px;
 }
 .item:nth-child(5) {
-  margin-top: -15px;
+  margin-top: 50px;
   margin-left: 5px;
 }
 .item:nth-child(6) {
-  margin-top: 10px;
-  margin-left: -20px;
+  margin-top: -60px;
+  margin-left: 105px;
 }
 .item:nth-child(7) {
-  margin-top: 30px;
+  margin-top: 80px;
   margin-left: -15px;
 }
 .item:nth-child(8) {
@@ -199,42 +281,11 @@ h1 {
 }
 
 
-.font-menu {
-  font-family: 'isenheim', cursive;
-  font-size: 3rem;
-  color: white;
-  -webkit-text-stroke: 1px #0011ff;
-}
-.font1 {
-  font-family: 'Almendra', fantasy;
-  font-size: 2.8rem;
-}
-.font2 {
-  font-family: 'Amiamie', serif;
-  font-size: 2.4rem;
-}
-.font3 {
-  font-family: 'Anthony', serif;
-  font-size: 2rem;
-}
-.font4 {
-  font-family: 'roberte', serif;
-  font-size: 1.5rem;
-}
-.font5 {
-  font-family: 'Scribble-Fill', serif;
-  font-size: 3rem;
-}
-.font6 {
-  font-family: 'FranklintheGoth', serif;
-  font-size: 2rem;
-}
-
 
 /* White Boxes */
 .whitebox {
   background: white;
-  padding: 1em;
+  padding: 0.8em;
   color: #0011ff;
   font-size: 1.5rem;
   position: relative;
