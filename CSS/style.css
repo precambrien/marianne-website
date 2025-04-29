@@ -348,8 +348,8 @@ h1 {
 .project-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 3em;
-  padding: 3em;
+  gap: 2em;
+  padding: 2em;
 }
 
 /* Left column: Text */
@@ -359,10 +359,10 @@ h1 {
 
 /* Right column: Photos */
 .right-column {
-  flex: 1 1 400px;
+  flex: 1 1 500px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em;
+  gap: 2em;
   justify-content: center;
   align-items: flex-start;
 }
@@ -371,11 +371,11 @@ h1 {
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 2em;
 }
 
 .photo {
-  width: 400px;
+  width: 500px;
   height: auto;
   object-fit: cover;
   max-width: 100%;
@@ -383,21 +383,21 @@ h1 {
 }
 
 /* Small messy margins on photos */
-.photo:nth-child(1) {
-  margin-top: -10px;
-  margin-left: 40px;
-}
-.photo:nth-child(2) {
-  margin-top: 55px;
-  margin-left: -10px;
-}
-.photo:nth-child(3) {
-  margin-top: -5px;
-  margin-left: 60px;
-}
-.photo:nth-child(4) {
-  margin-top: 70px;
-  margin-left: -5px;
+/* .photo:nth-child(1) { */
+/*   margin-top: -10px; */
+/*   margin-left: 40px; */
+/* } */
+/* .photo:nth-child(2) { */
+/*   margin-top: 55px; */
+/*   margin-left: -10px; */
+/* } */
+/* .photo:nth-child(3) { */
+/*   margin-top: -5px; */
+/*   margin-left: 60px; */
+/* } */
+/* .photo:nth-child(4) { */
+/*   margin-top: 70px; */
+/*   margin-left: -5px; */
 }
 
 /* Responsive for mobile */
