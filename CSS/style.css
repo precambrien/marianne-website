@@ -64,6 +64,14 @@
 /* ============================================================================== */
 /*                          TYPOGRAPHY : font declaration                         */
 /* ============================================================================== */
+
+body,    /* body inherit this font here */
+.font-body {
+  font-family: 'baskervvol', serif;
+  color: #0011ff;
+  font-size: clamp(1em, 2vw, 2em);
+}
+
 .font-title {
   font-family: 'Sinistre', cursive;
   font-size: clamp(3em,6vw,8em);
@@ -153,9 +161,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'baskervvol', serif;
-  color: #0011ff;
-  font-size: clamp(1em,2vw,2em);
 }
 
 /* Universal link reset */
@@ -269,26 +274,27 @@ h1 {
 /* On small screens, reset margins */
 @media (max-width: 768px) {
   .item {
-    margin: 0 !important;
+    margin: 0 !important; /* important! permits to override for every nth child */
     padding: 0;
   }
   .container {
     padding: 2em;
   }
 }
-/* Section Titles */
-.section-title {
+/* ============================================================================== */
+/*                       WHITE SQUARE BOXES                                       */
+/* ============================================================================== */
+/* Title over the whitebox */
+.whitebox-title {
   text-align: left;
   font-weight: bold;
   margin-bottom: 0.3em;
 }
-/* Section subtitles */
-.section-subtitle {
+/* Subtitle over the whitebox */
+.whitebox-subtitle {
   text-align: left;
   margin-bottom: 0.3em;
 }
-
-
 /* White Boxes */
 .whitebox {
   background: white;
@@ -317,7 +323,9 @@ h1 {
   font-style: italic;
 }
 
-
+/* ============================================================================== */
+/*                       IMAGES ON HOVER FOR MESSY ITEMS                          */
+/* ============================================================================== */
 /* Hide the hover images by default */
 .hover-image {
   display: none;
