@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widthj,initial-scale=1.0">
+    <!--defines the size to be adapted according to the device-->
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Audioguides</title>
+</head>
+
+<body>
+    <!-- BARRE MENU HAUT-->
+    <div class="navbar">
+        <div class="navContainer flex">
+            <!--flexbox définie dans css, "container" tout seul fonctionne aussi-->
+            <h1 class="logo">Marianne Thibault</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Projets</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="bodyContainer">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="Images/Projet images/Audioguides/01.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="Images/Projet images/Audioguides/02.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="Images/Projet images/Audioguides/03.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+        <div class="title">Audioguides</div> 
+        <div class="undertitle">Installation, 2019 </div>
+        <div class="text"> Au sein d’une exposition, 10 mp3 avec lanières portatives, insérés dans un socle fixé au point de médiation, sont mis à disposition des spectateurs comme des audioguides. Chaque piste sonore est associée à une pièce de l’exposition, mais au lieu d’un commentaire de l’œuvre artistique, elle décrit les matières premières qui la composent. Esquissant un rapide historique de l’acier ou les enjeux mondiaux du commerce du coton, les pistes sonores se concluent systématiquement par une évaluation de l’énergie grise nécessaire à la création de chacune des pièces, et par son équivalent en heures ou jours de course à pied. 
+            La pièce peut être acquise telle quelle ou actualisée pour s’insérer dans une nouvelle exposition.
+        </div>
+    </div>
+
+
+</body>

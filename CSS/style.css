@@ -74,12 +74,11 @@ body {
 h1 {
   font-family: 'Sinistre', cursive;
   font-size: 6rem;
+  /* transform: scaleX(3); */
   color: transparent;
-  -webkit-text-stroke: 1px #0011ff;
+  -webkit-text-stroke: 2px #0011ff;
   text-align: center;
-  margin-top: 1rem; /* reduce this */
-  margin-bottom: 0.5rem; /* add this to tighten space below */
-  letter-spacing: 0.1em;
+  /* margin: 0em 5em; */
 }
 
 /*                    */
@@ -90,7 +89,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 1em 2em;
+  margin: 1em 1em;
   flex-wrap: wrap; /* allow wrap for mobile */
 }
 
@@ -332,8 +331,6 @@ h1 {
 
 /* Arrows */
 .arrow {
-  font-size: 3rem;
-  color: #0011ff;
   text-decoration: none;
   position: relative;
   align-self: center;

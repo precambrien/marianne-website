@@ -1,100 +1,32 @@
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <!--defines the size to be adapted according to the device-->
-
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>L'essentiel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'essentiel</title>
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
-<body>
-    <!-- BARRE MENU HAUT-->
-    <div class="navbar">
-        <div class="navContainer flex">
-            <!--flexbox définie dans css, "container" tout seul fonctionne aussi-->
-            <h1 class="logo">Marianne Thibault</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Projets</a></li>
-                    <li><a href="actualites.html">Actualités</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
-                </ul>
-            </nav>
-        </div>
+<body style="background: linear-gradient(to bottom, #ffff99, #ffe066);">
+
+  <nav class="navigation">
+    <div class="nav-left font-menu">
+      <a href="../projets.html">&lt;&lt;Menu</a><br>
     </div>
+  </nav>
 
+  <div class="project-content">
+    <a href="previous-page.html" class="arrow left-arrow font-menu">&lt;</a>
 
-
-
-    <div class="bodyContainer">
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="Images/Projet images/L'essentiel/01.png" style="width:100%">
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="Images/Projet images/L'essentiel/02.png" style="width:100%">
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="Images/Projet images/L'essentiel/03.jpg" style="width:100%">
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
-            
-            <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-            </script>
-       
-        <br><br>
-
-
-        <div class="title">L'essentiel</div> 
-        <div class="undertitle">Installation, 2021 </div>
-        <div class="text">Conçue avec Yassine Haj Idrissi, cette installation 
+    <div class="left-column">
+      <div class="section-title font1">L'essentiel</div>
+      <div class="section-subtitle font2">
+        Installation, 2021
+      </div>
+      <div class="whitebox">
+        Conçue avec Yassine Haj Idrissi, cette installation 
             comprend deux palettes, une marmite, son support de cuisson relié à sa 
             bouteille de gaz butane et l’ustensile nécessaire pour mélanger 
             les ingrédients. Ces outils servent à préparer plusieurs centaines 
@@ -102,8 +34,20 @@
             1 556 000 plats pour des personnes en situation de migration, à 
             Bruxelles et à Calais. Ils sont actuellement toujours 
             utilisés au sein de l’association Belgium Kitchen, à Bruxelles. 
-            Le bénéfice de leur exposition ou acquisition en tant que pièce artistique est reversé à l’association, entre autres pour acheter une marmite neuve.</div>
+            Le bénéfice de leur exposition ou acquisition en tant que pièce artistique est reversé à l’association, entre autres pour acheter une marmite neuve.
+      </div>
     </div>
 
+    <div class="right-column">
+       <div class="photo-grid">
+         <img src="../Images/Projet images/L'essentiel/01.png" alt="Cocktail" class="photo"/>
+<img src="../Images/Projet images/L'essentiel/02.png" alt="Cocktail" class="photo"/>
+<img src="../Images/Projet images/L'essentiel/03.jpg" alt="Cocktail" class="photo"/>
+      </div>
+    </div>
+
+  <a href="next-page.html" class="arrow right-arrow font-menu">&gt;</a>
+  </div>
 
 </body>
+</html>
