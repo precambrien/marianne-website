@@ -62,39 +62,39 @@
 /* FONTS */
 .font-title {
   font-family: 'Sinistre', cursive;
-  font-size: 6rem;
+  font-size: clamp(3em,6vw,8em);
   color: transparent;
   -webkit-text-stroke: 2px #0011ff;
 }
 .font-menu {
   font-family: 'isenheim', cursive;
-  font-size: 3rem;
+  font-size: clamp(1.2em,3vw,5em);
   color: white;
   -webkit-text-stroke: 1px #0011ff;
 }
 .font1 {
   font-family: 'Almendra', fantasy;
-  font-size: 3.8rem;
+  font-size: clamp(1.3em,4vw,5em);
 }
 .font2 {
   font-family: 'Amiamie', serif;
-  font-size: 4.4rem;
+  font-size: clamp(1em,3vw,5.2em);
 }
 .font3 {
   font-family: 'Anthony', serif;
-  font-size: 4rem;
+  font-size: clamp(1.7em,4vw,5.5em);
 }
 .font4 {
   font-family: 'roberte', serif;
-  font-size: 3.5rem;
+  font-size: clamp(0.8em,5vw,6em);
 }
 .font5 {
   font-family: 'Scribble-Fill', serif;
-  font-size: 5.5rem;
+  font-size: clamp(1.5em,4vw,6em);
 }
 .font6 {
   font-family: 'FranklintheGoth', serif;
-  font-size: 5rem;
+  font-size: clamp(2em,4vw,6em);
 }
 
 /* =============================== */
@@ -153,6 +153,7 @@ body {
   padding: 0;
   font-family: 'baskervvol', serif;
   color: #0011ff;
+  font-size: clamp(0.3em,1vw,2em);
 }
 
 /* Universal link reset */
@@ -264,7 +265,11 @@ h1 {
 /* On small screens, reset margins */
 @media (max-width: 768px) {
   .item {
-    margin: 0;
+    margin: 0 !important;
+    padding: 0;
+  }
+  .container {
+    padding: 2em;
   }
 }
 /* Section Titles */
