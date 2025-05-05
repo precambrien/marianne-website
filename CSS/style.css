@@ -151,7 +151,7 @@ html {
 a:link,
 a:visited {
   color: inherit;
-  text-decoration: none;
+  /* text-decoration: none; */
   -webkit-text-stroke: inherit;
 }
 /*                    */
@@ -208,69 +208,122 @@ h1 {
 /* ============================================================================== */
 /*                       MESSY ITEMS                                              */
 /* ============================================================================== */
-/* Container */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 2em;
-  padding: 3em;
+/* Main container */
+.messy-words-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* Items */
-.item {
-  width: clamp(250px, 30vw, 400px);
-  position: relative;
-}
-/* Items */
-.item.wide {
-  width: clamp(400px, 40vw, 800px);
-  position: relative;
+/* Base link style */
+.messy-word {
+  position: absolute;
+  color: #0011ff;
+  text-decoration: none;
+  line-height: 1;
 }
 
-/* MESSY MARGINS on each item */
-.item:nth-child(1) {
-  margin-top: 20px;
-  margin-left: 30px;
+
+/* Individual positions and styles */
+.pos1 { /*le plus long feu */
+  top: 10%;
+  left: 7%;
+  font-weight: bold;
 }
-.item:nth-child(2) {
-  margin-top: -40px;
-  margin-left: -15px;
+.pos2 { /* Chateau lointain */
+  top: 5%;
+  left: 30%;
 }
-.item:nth-child(3) {
-  margin-top: 5px;
-  margin-left: 25px;
+
+.pos3 { /* Poésie */
+  top: 25%;
+  left: 45%;
+  transform: rotate(-5deg);
 }
-.item:nth-child(4) {
-  margin-top: 80px;
-  margin-left: -40px;
+
+.pos4 { /* J'ai vendu */
+  top: 18%;
+  left: 67%;
 }
-.item:nth-child(5) {
-  margin-top: 50px;
-  margin-left: 5px;
+
+.pos5 { /* lisière */
+  top: 50%;
+  left: 5%;
+  transform: scaleX(1.1);
 }
-.item:nth-child(6) {
-  margin-top: -60px;
-  margin-left: 105px;
+
+.pos6 { /* l'essentiel */
+  top: 65%;
+  left: 58%;
+  font-style: italic;
+  text-decoration: underline;
 }
-.item:nth-child(7) {
-  margin-top: 80px;
-  margin-left: -15px;
+
+.pos7 { /* jungles */
+  top: 75%;
+  left: 8%;
+  transform: rotate(5deg);
 }
-.item:nth-child(8) {
-  margin-top: 40px;
-  margin-left: -18px;
+.pos8 { /* on ne sera pas  */
+  top: 72%;
+  left: 28%;
+  transform: rotate(-5deg);
+  text-decoration: underline;
 }
-/* On small screens, reset margins */
-@media (max-width: 768px) {
-  .item {
-    margin: 0 !important; /* important! permits to override for every nth child */
-    padding: 0;
-    width: 100%;
-  }
-  .container {
-    padding: 2em;
-  }
+.pos9 { /* Audioguides */
+  top: 85%;
+  left: 48%;
+}
+.pos10 { /* Paradigmes */
+  top: 90%;
+  left: 70%;
+}
+.pos11 { /* Taux d'echange */
+  top: 108%;
+  left: 2%;
+}
+.pos12 { /* Facture */
+  top: 98%;
+  left: 28%;
+}
+.pos13 { /* Chromatiques */
+  top: 120%;
+  left: 60%;
+}
+.pos14 {
+  top: 130%;
+  left: 20%;
+}
+
+/* .container { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   justify-content: flex-start; */
+/*   gap: 2rem; */
+/*   margin-top: 3rem; */
+/*   padding: 2rem; */
+/* } */
+
+/* /1* Items *1/ */
+/* .item { */
+/*   width: clamp(250px, 30vw, 350px); */
+/*   position: relative; */
+/* } */
+/* /1* Items *1/ */
+/* .item.wide { */
+/*   width: clamp(400px, 40vw, 800px); */
+/*   position: relative; */
+
+/* /1* On small screens, reset margins *1/ */
+/* @media (max-width: 768px) { */
+/*   .item { */
+/*     margin: 0 !important; /1* important! permits to override for every nth child *1/ */
+/*     padding: 0; */
+/*     width: 100%; */
+/*   } */
+/*   .container { */
+/*     padding: 2em; */
+/*   } */
 }
 /* ============================================================================== */
 /*                       WHITE SQUARE BOXES                                       */
@@ -293,6 +346,7 @@ h1 {
   color: #0011ff;
   position: relative;
   overflow: hidden;
+  width: clamp(200px, 50vw, 600px);
 }
 
 /* Plus Button: for white boxes */
@@ -320,14 +374,15 @@ h1 {
 /* Hide the hover images by default */ 
 .hover-image {
   display: none;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 0.5rem;
+  /* width: 100%; */
+  /* max-width: 400px; */
+  /* margin-top: 0.5rem; */
 }
 
 /* Show the hover image when hovering over the whole item */
 .item:hover .hover-image {
-  display: block;
+  /* display: block; */
+  display: none;
 }
 
 
