@@ -452,9 +452,11 @@ h1 {
 }
 
 /* Photo positions */
-.p1 { top: 0; left: 20%; }
-.p2 { top: 30%; left: 0%; }
-.p3 { top: 50%; left: 40%; }
+.p1 { top: 0; left: 40%; }
+.p2 { top: 40%; left: 0%; }
+.p3 { top: 80%; left: 40%; }
+.p4 { top: 100%; left: 20%; }
+
 
 .arrow {
   font-size: 4rem;
@@ -496,7 +498,6 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
-    margin-top: 1em;
     position: static;
   }
 
