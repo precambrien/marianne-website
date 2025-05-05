@@ -74,10 +74,24 @@ body,    /* body inherit this font here */
 
 .font-title {
   font-family: 'Sinistre', cursive;
-  font-size: clamp(3em,6vw,8em);
+  font-size: 9vw; /* Responsive */
   color: transparent;
   -webkit-text-stroke: 2px #0011ff;
+  transform: scaleX(2); /* Crazy wide look */
+  transform-origin: center;
 }
+
+/* Fewer letters → less stretch */
+.font-title.short {
+  font-size: 9vw;
+  transform: scaleX(2.2);
+}
+
+/* Long word */
+.font-title.long {
+  font-size: 8vw;
+}
+
 .font-menu {
   font-family: 'isenheim', cursive;
   font-size: clamp(1.2em,3vw,5em);
@@ -110,57 +124,13 @@ body,    /* body inherit this font here */
 }
 
 /* ============================================================================== */
-/*                          TYPOGRAPHY : "crazy" scaling (smashed fonts)          */
-/* ============================================================================== */
-
-/* 1. Wide — Stretch horizontally */
-.crazy-wide {
-  transform: scaleX(1.5) scaleY(1);
-}
-
-/* 2. Tall — Stretch vertically */
-.crazy-tall {
-  transform: scaleX(1) scaleY(1.5);
-}
-
-/* 3. Crazy — Wild wide and a bit flat */
-.crazy-wild {
-  transform: scaleX(2) scaleY(0.7);
-}
-
-/* responsive for mobile */
-@media (max-width: 768px) {
-  .crazy-wide,
-  .crazy-tall,
-  .crazy-wild {
-    transform: scaleX(1.1) scaleY(1.1); /* So it's less broken on small screens */
-  }
-}
-
-/* Container for crazy fonts */
-.crazy-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  padding: 0 0;
-}
-
-/* Optional: Make sure content inside doesn't overflow horribly */
-.crazy-container * {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* ============================================================================== */
 /*                          GENERAL SETTINGS                                      */
 /* ============================================================================== */
 /* General settings */
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Universal link reset */
@@ -176,6 +146,7 @@ a:visited {
 h1 {
   text-align: center;
   margin: 0;
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 /* ============================================================================== */
@@ -234,7 +205,12 @@ h1 {
 
 /* Items */
 .item {
-  width: 450px;
+  width: clamp(250px, 30vw, 400px);
+  position: relative;
+}
+/* Items */
+.item.wide {
+  width: clamp(400px, 40vw, 800px);
   position: relative;
 }
 
@@ -276,6 +252,7 @@ h1 {
   .item {
     margin: 0 !important; /* important! permits to override for every nth child */
     padding: 0;
+    width: 100%;
   }
   .container {
     padding: 2em;
@@ -367,20 +344,77 @@ h1 {
   align-items: flex-start;
 }
 
-/* Photos messy layout */
-.photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.photo {
-  width: 500px;
+.gallery-item {
+  position: relative;
+  grid-row: span 2;
+}
+
+/* image-wrapper = the element that gets scaled and positioned */
+.image-wrapper {
+  width: 100%;
   height: auto;
-  object-fit: cover;
-  max-width: 100%;
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* do not crop */
   display: block;
 }
+
+/* matrix-style transforms for each image wrapper */
+
+.scale1 {
+  transform: scale(1.2, 0.9) translateY(10px);
+  grid-column: span 3;
+}
+
+.scale2 {
+  transform: scale(1.1, 1.1) translateX(-10px);
+  grid-column: span 2;
+}
+
+.scale3 {
+  transform: scale(1.3, 0.8) translateY(-20px);
+  grid-column: span 3;
+}
+
+/* Optional: remove transforms on small screens */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-wrapper {
+    transform: none !important;
+  }
+}
+
+
+/* /1* Photos messy layout *1/ */
+/* .photo-grid { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   gap: 2em; */
+/* } */
+
+/* .photo { */
+/*   width: 500px; */
+/*   height: auto; */
+/*   object-fit: cover; */
+/*   max-width: 100%; */
+/*   display: block; */
+/* } */
 
 /* Small messy margins on photos */
 /* .photo:nth-child(1) { */
@@ -401,14 +435,14 @@ h1 {
 /* } */
 
 /* Responsive for mobile */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-  .right-column {
-    justify-content: center;
-  }
-}
+/* @media (max-width: 768px) { */
+/*   .main-content { */
+/*     flex-direction: column; */
+/*   } */
+/*   .right-column { */
+/*     justify-content: center; */
+/*   } */
+/* } */
 
 /* Arrows */
 .arrow {

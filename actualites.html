@@ -7,22 +7,37 @@
   <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body style="background: url('Images/fonds/fond_actualites.webp') no-repeat center center fixed; background-size: cover;">
+<style>
+  body {
+    background-image: url("Images/fonds/fond_actualites.webp");
+    <!-- background-size: cover; -->
+    <!-- background-position: center top; -->
+    <!-- background-repeat: no-repeat; -->
+    min-height: 100vh;
+  }
 
-  <h1 class="font-title">ACTUALITÉS</h1>
+  @media (max-width: 768px) {
+    body {
+      background-image: url("Images/fonds/mobile_fond_actualites.webp");
+    }
+  }
+</style>
+
+    <h1 class="font-title long">ACTUALITÉS</h1>
+
   <nav class="navigation">
     <div class="nav-left font-menu">
       <a href="projets.html">&#x2E2D;&#x2E2D; Projets</a>
       <a href="apropos.html">&#x2022;&#x2022; À propos</a><br>
     </div>
     <div class="nav-right">
-      <a href="./Marianne_Thibault_Portfolio.pdf">Télécharger le portfolio</a>
+      <a href="./Marianne_Thibault_Portfolio.pdf" target=_"blank">Ouvrir le portfolio</a>
     </div>
   </nav>
 
   <div class="container">
 
-    <div class="item">
+    <div class="item wide">
       <div class="whitebox">
         <strong>Paris 2024 - 2025</strong> <br>
         Scènes ouvertes Flowerbed, La textape, Ratages...
