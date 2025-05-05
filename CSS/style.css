@@ -80,21 +80,21 @@ body,    /* body inherit this font here */
   transform: scaleX(2); /* Crazy wide look */
   transform-origin: center;
 }
+
+/* Fewer letters → more horizontal stretch */
+.font-title.short {
+  transform: scaleX(2.4);
+}
+
+/* Long word → less horizontal stretch */
+.font-title.long {
+  transform: scaleX(1.7); /* Crazy wide look */
+}
+/* less stroke pixels for mobile (finer line) */
 @media (max-width: 768px) {
   .font-title {
     -webkit-text-stroke: 1px #0011ff;
   }
-}
-
-/* Fewer letters → less stretch */
-.font-title.short {
-  font-size: clamp(3em,9vw,6em);
-  transform: scaleX(2.2);
-}
-
-/* Long word */
-.font-title.long {
-  font-size: clamp(2.3em,8vw,5.5em);
 }
 
 .font-menu {
@@ -159,7 +159,7 @@ a:visited {
 /*                    */
 h1 {
   text-align: center;
-  margin: 0;
+  margin: 1rem 0 0 0;
   white-space: nowrap; /* Prevent line breaks */
 }
 
