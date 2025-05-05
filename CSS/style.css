@@ -74,22 +74,27 @@ body,    /* body inherit this font here */
 
 .font-title {
   font-family: 'Sinistre', cursive;
-  font-size: 9vw; /* Responsive */
+  font-size: clamp(2.7em,9vw,6em);
   color: transparent;
   -webkit-text-stroke: 2px #0011ff;
   transform: scaleX(2); /* Crazy wide look */
   transform-origin: center;
 }
+@media (max-width: 768px) {
+  .font-title {
+    -webkit-text-stroke: 1px #0011ff;
+  }
+}
 
 /* Fewer letters → less stretch */
 .font-title.short {
-  font-size: 9vw;
+  font-size: clamp(3em,9vw,6em);
   transform: scaleX(2.2);
 }
 
 /* Long word */
 .font-title.long {
-  font-size: 8vw;
+  font-size: clamp(2.3em,8vw,5.5em);
 }
 
 .font-menu {
