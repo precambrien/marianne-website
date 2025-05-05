@@ -478,12 +478,12 @@ h1 {
     height: auto;
   }
 
-  .nav-arrow.left {
+  .arrow.left {
     grid-area: left-arrow;
     justify-self: start;
   }
 
-  .nav-arrow.right {
+  .arrow.right {
     grid-area: right-arrow;
     justify-self: end;
   }
