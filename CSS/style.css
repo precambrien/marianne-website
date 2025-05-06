@@ -136,17 +136,16 @@ body,    /* body inherit this font here */
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  height: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-/* body { */
-/*   padding-bottom: 20vh; */
-/* } */
+body {
+  padding-bottom: 10vh;
+}
 
 html {
   min-height: -webkit-fill-available;
@@ -237,11 +236,11 @@ h1 {
 .pos-b-5 { /* cv */
 }
 
-.pos-b-6 { /* diplomes */
+.pos-b-6 { /* dioplomes */
 }
 
 .pos-b-7 { /* contact */
-  transform: translateX(5vw) translateY(10vh);
+  transform: translateX(7vw);
 }
 
 
@@ -265,6 +264,11 @@ h1 {
 /* ============================================================================== */
 /*                       MESSY WORDS (PROJETS PAGE)                               */
 /* ============================================================================== */
+
+.messy-wrapper {
+  height: 100vh;
+  position: relative;
+}
 
 /* Main container */
 .messy-words-container {
@@ -444,7 +448,6 @@ h1 {
   display: grid;
   grid-template-columns: auto 1fr 2fr auto;
   grid-template-rows: 1fr;
-  height: 100vh;
   width: 100vw;
   padding: 2em;
   box-sizing: border-box;
@@ -480,6 +483,27 @@ h1 {
   color: #0011ff;
   text-decoration: none;
   align-self: center;
+}
+
+/* Photos fullscreen overlay on click */
+.photo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 246, 173, 0.90);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.photo-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
 }
 
 
