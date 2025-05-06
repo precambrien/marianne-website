@@ -144,6 +144,10 @@ html, body {
   background-position: center top;
 }
 
+/* body { */
+/*   padding-bottom: 20vh; */
+/* } */
+
 html {
   min-height: -webkit-fill-available;
 }
@@ -198,24 +202,70 @@ h1 {
 }
 
 /* ============================================================================== */
-/*                       MESSY WORDS                                              */
+/*                       MESSY WHITE BOXES  (apropos)                             */
 /* ============================================================================== */
 
-/* Main container */
 .messy-box-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2em;
+  padding: 2em;
+}
+.messy-box {
+  grid-column: span 6; /* full width by default */
+}
+.messy-box.half {
+    grid-column: span 3; /* half width */
 }
 
-/* Base link style */
-.messy-box {
-  position: absolute;
-  color: #0011ff;
-  text-decoration: none;
-  line-height: 1;
+/* Individual positions and styles */
+.pos-b-1 { /*l Expositions */
+  transform: translateX(5vw);
 }
+.pos-b-2 { /* Performances */
+  transform: translateX(8vw) rotate(-5deg);
+}
+
+.pos-b-3 { /* Residences */
+  transform: translateX(10vw);
+}
+
+.pos-b-4 { /* Articles */
+  transform: translateX(5vw) rotate(5deg);
+}
+
+.pos-b-5 { /* cv */
+}
+
+.pos-b-6 { /* diplomes */
+}
+
+.pos-b-7 { /* contact */
+  transform: translateX(5vw) translateY(10vh);
+}
+
+
+@media (max-width: 768px) {
+  .messy-box-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .messy-box {
+    grid-column: span 12; /* default: full width */
+  }
+
+  .messy-box.half {
+    grid-column: span 6; /* half width */
+  }
+}
+
+/* ============================================================================== */
+/*                       MESSY WORDS (PROJETS PAGE)                               */
+/* ============================================================================== */
+
 /* Main container */
 .messy-words-container {
   position: relative;
@@ -302,49 +352,7 @@ h1 {
   left: 20%;
 }
 
-
-
-/* Individual positions and styles */
-.pos-b-1 { /*l Expositions */
-  top: 4%;
-  left: 9%;
-}
-.pos-b-2 { /* Performances */
-  top: 25%;
-  left: 20%;
-  transform: rotate(-5deg);
-}
-
-.pos-b-3 { /* Residences */
-  top: 45%;
-  left: 4%;
-}
-
-.pos-b-4 { /* Articles */
-  top: 68%;
-  left: 30%;
-}
-
-.pos-b-5 { /* cv */
-  top: 90%;
-  left: 2%;
-}
-
-.pos-b-6 { /* diplomes */
-  top: 95%;
-  left: 48%;
-}
-
-.pos-b-7 { /* contact */
-  top: 120%;
-  left: 8%;
-  transform: rotate(4deg);
-}
-
-
-
-
-/* Mobile: reset messy layout and center text */
+/* Mobile: reset flex layout (stacked) and right-centered text */
 @media (max-width: 768px) {
   .messy-words-container {
     display: flex;
@@ -361,45 +369,8 @@ h1 {
     text-align: right;
     transform: none !important;
   }
-
-  /* Base link style */
-  /* .messy-box { */
-  /*   position: absolute; */
-  /*   color: #0011ff; */
-  /*   text-decoration: none; */
-  /*   line-height: 1; */
-  /* } */
 }
-/* .container { */
-/*   display: flex; */
-/*   flex-wrap: wrap; */
-/*   justify-content: flex-start; */
-/*   gap: 2rem; */
-/*   margin-top: 3rem; */
-/*   padding: 2rem; */
-/* } */
 
-/* /1* Items *1/ */
-/* .item { */
-/*   width: clamp(250px, 30vw, 350px); */
-/*   position: relative; */
-/* } */
-/* /1* Items *1/ */
-/* .item.wide { */
-/*   width: clamp(400px, 40vw, 800px); */
-/*   position: relative; */
-
-/* /1* On small screens, reset margins *1/ */
-/* @media (max-width: 768px) { */
-/*   .item { */
-/*     margin: 0 !important; /1* important! permits to override for every nth child *1/ */
-/*     padding: 0; */
-/*     width: 100%; */
-/*   } */
-/*   .container { */
-/*     padding: 2em; */
-/*   } */
-/* } */
 /* ============================================================================== */
 /*                       WHITE SQUARE BOXES                                       */
 /* ============================================================================== */
@@ -427,7 +398,6 @@ h1 {
 .whitebox.small {
   width: clamp(100px, 40vw, 400px);
 }
-
 
 /* Plus Button: for white boxes */
 .plus {
