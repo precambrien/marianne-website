@@ -53,7 +53,8 @@
   font-family: 'Scribble-Fill';
   src: url('../Fonts/Scribble-Fill/Scribble-Fill.woff2') format('woff2');
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
+  text-decoration: underline;
 }
 @font-face {
   font-family: 'FranklintheGoth';
@@ -117,7 +118,7 @@ body,    /* body inherit this font here */
 }
 .font4 {
   font-family: 'roberte', serif;
-  font-size: clamp(0.8em,4vw,6em);
+  font-size: clamp(2em,4vw,6em);
 }
 .font5 {
   font-family: 'Scribble-Fill', serif;
@@ -232,75 +233,116 @@ h1 {
 }
 
 /* Individual positions and styles */
-.pos1 { /*le plus long feu */
+.pos-a-1 { /*le plus long feu */
   top: 10%;
   left: 7%;
-  font-weight: bold;
 }
-.pos2 { /* Chateau lointain */
+.pos-a-2 { /* Chateau lointain */
   top: 5%;
   left: 30%;
 }
 
-.pos3 { /* Poésie */
+.pos-a-3 { /* Poésie */
   top: 25%;
   left: 45%;
   transform: rotate(-5deg);
 }
 
-.pos4 { /* J'ai vendu */
+.pos-a-4 { /* J'ai vendu */
   top: 18%;
   left: 67%;
 }
 
-.pos5 { /* lisière */
+.pos-a-5 { /* lisière */
   top: 50%;
   left: 5%;
   transform: scaleX(1.1);
 }
 
-.pos6 { /* l'essentiel */
+.pos-a-6 { /* l'essentiel */
   top: 65%;
   left: 58%;
   font-style: italic;
   text-decoration: underline;
 }
 
-.pos7 { /* jungles */
+.pos-a-7 { /* jungles */
   top: 75%;
   left: 8%;
   transform: rotate(5deg);
 }
-.pos8 { /* on ne sera pas  */
+.pos-a-8 { /* on ne sera pas  */
   top: 72%;
   left: 28%;
   transform: rotate(-5deg);
   text-decoration: underline;
 }
-.pos9 { /* Audioguides */
+.pos-a-9 { /* Audioguides */
   top: 85%;
   left: 48%;
 }
-.pos10 { /* Paradigmes */
+.pos-a-10 { /* Paradigmes */
   top: 90%;
   left: 70%;
 }
-.pos11 { /* Taux d'echange */
+.pos-a-11 { /* Taux d'echange */
   top: 108%;
   left: 2%;
 }
-.pos12 { /* Facture */
+.pos-a-12 { /* Facture */
   top: 98%;
   left: 28%;
 }
-.pos13 { /* Chromatiques */
+.pos-a-13 { /* Chromatiques */
   top: 120%;
   left: 60%;
 }
-.pos14 {
+.pos-a-14 { /* Entre les lignes */
   top: 130%;
   left: 20%;
 }
+
+
+
+/* Individual positions and styles */
+.pos-b-1 { /*l Expositions */
+  top: 4%;
+  left: 9%;
+}
+.pos-b-2 { /* Performances */
+  top: 25%;
+  left: 20%;
+  transform: rotate(-5deg);
+}
+
+.pos-b-3 { /* Residences */
+  top: 45%;
+  left: 4%;
+}
+
+.pos-b-4 { /* Articles */
+  top: 68%;
+  left: 30%;
+}
+
+.pos-b-5 { /* cv */
+  top: 90%;
+  left: 2%;
+}
+
+.pos-b-6 { /* diplomes */
+  top: 95%;
+  left: 48%;
+}
+
+.pos-b-7 { /* contact */
+  top: 120%;
+  left: 8%;
+  transform: rotate(4deg);
+}
+
+
+
 
 /* Mobile: reset messy layout and center text */
 @media (max-width: 768px) {
@@ -381,6 +423,11 @@ h1 {
   overflow: hidden;
   width: clamp(200px, 50vw, 600px);
 }
+
+.whitebox.small {
+  width: clamp(100px, 40vw, 400px);
+}
+
 
 /* Plus Button: for white boxes */
 .plus {
