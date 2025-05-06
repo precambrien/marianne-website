@@ -153,6 +153,11 @@ html {
   min-height: -webkit-fill-available;
 }
 
+.spacer {
+  height: 3vh;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -326,7 +331,7 @@ h1 {
 }
 
 .pos-a-4 { /* J'ai vendu */
-  top: 18%;k
+  top: 18%;
   left: 67%;
 }
 
@@ -502,6 +507,7 @@ h1 {
 
 .arrow {
   font-size: 4rem;
+  font-size: clamp(2rem, 3vw, 4rem);
   color: #0011ff;
   text-decoration: none;
   align-self: center;
