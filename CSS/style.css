@@ -178,6 +178,7 @@ h1 {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+  height: 100dvh; /* will override if supported */
   width: 100vw;
   overflow: hidden;
 }
@@ -185,6 +186,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .messy-menu {
   position: absolute;
