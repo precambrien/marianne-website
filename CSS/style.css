@@ -91,12 +91,6 @@ body,    /* body inherit this font here */
 .font-title.long {
   transform: scaleX(1.7); /* Crazy wide look */
 }
-/* less stroke pixels for mobile (finer line) */
-@media (max-width: 768px) {
-  .font-title {
-    -webkit-text-stroke: 1px #0011ff;
-  }
-}
 
 .font-menu {
   font-family: 'isenheim', cursive;
@@ -104,6 +98,17 @@ body,    /* body inherit this font here */
   color: white;
   -webkit-text-stroke: 1px #0011ff;
 }
+
+/* less stroke pixels for mobile (finer line) */
+@media (max-width: 768px) {
+  .font-title {
+    -webkit-text-stroke: 1px #0011ff;
+  }
+  .font-menu {
+    -webkit-text-stroke: 0.5px #0011ff;
+  }
+}
+
 .font1 {
   font-family: 'Almendra', fantasy;
   font-size: clamp(1.3em,3vw,5em);
@@ -143,28 +148,46 @@ html, body {
   background-position: center top;
 }
 
-body {
-  padding-bottom: 10vh;
-}
-
 html {
   min-height: -webkit-fill-available;
 }
 
-/* Universal link reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Universal link reset: no special color for visited links, no forced underline for links */
 a:link,
 a:visited {
   color: inherit;
-  /* text-decoration: none; */
+  text-decoration: none;
   -webkit-text-stroke: inherit;
 }
 /*                    */
-/* PAGES MAIN TITLE   */
+/* ALL PAGES MAIN TITLE   */
 /*                    */
 h1 {
   text-align: center;
-  margin: 0.5rem 0 0 0;
+  margin: 0.5rem 0;
   white-space: nowrap; /* Prevent line breaks */
+}
+/* ============================================================================== */
+/*                        INDEX PAGE                                              */
+/* ============================================================================== */
+.landing-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.messy-menu-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.messy-menu {
+  position: absolute;
 }
 
 /* ============================================================================== */
@@ -244,7 +267,7 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .messy-box-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -275,15 +298,11 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
 }
 
 /* Base link style */
 .messy-word {
   position: absolute;
-  color: #0011ff;
-  text-decoration: none;
-  line-height: 1;
 }
 
 /* Individual positions and styles */
@@ -303,7 +322,7 @@ h1 {
 }
 
 .pos-a-4 { /* J'ai vendu */
-  top: 18%;
+  top: 18%;k
   left: 67%;
 }
 
@@ -396,14 +415,14 @@ h1 {
   color: #0011ff;
   position: relative;
   overflow: hidden;
-  width: clamp(200px, 50vw, 600px);
+  width: clamp(260px, 50vw, 600px);
 }
-
+/* Small version of whitebox */
 .whitebox.small {
   width: clamp(100px, 40vw, 400px);
 }
 
-/* Plus Button: for white boxes */
+/* Plus Button for white boxes */
 .plus {
   position: absolute;
   bottom: 5px;
@@ -419,7 +438,6 @@ h1 {
 .extra {
   display: none;
   margin-top: 1em;
-  font-style: italic;
 }
 
 /* ============================================================================== */
@@ -449,13 +467,12 @@ h1 {
   grid-template-columns: auto 1fr 2fr auto;
   grid-template-rows: 1fr;
   width: 100vw;
-  padding: 2em;
-  box-sizing: border-box;
-  gap: 1em;
+  padding: 3rem;
+  gap: 1rem;
 }
 
 .project-info {
-  padding: 2em;
+  padding: 2rem;
   position: relative;
 }
 
@@ -467,7 +484,8 @@ h1 {
 
 .photo {
   position: absolute;
-  width: 500px;
+  width: clamp(200px, 25vw, 500px);
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -475,7 +493,7 @@ h1 {
 .p1 { top: 0; left: 40%; }
 .p2 { top: 40%; left: 0%; }
 .p3 { top: 80%; left: 40%; }
-.p4 { top: 100%; left: 20%; }
+.p4 { top: 100%; left: 0%; }
 
 
 .arrow {
@@ -507,7 +525,7 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .project-page {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -531,6 +549,9 @@ h1 {
 
   .project-info {
     grid-area: project-info;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ horizontally center content */
   }
 
   .photo-wall {
