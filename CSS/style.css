@@ -212,10 +212,10 @@ h1 {
   padding: 2em;
 }
 .messy-box {
-  grid-column: span 6; /* full width by default */
+  grid-column: span 6; /* half width by default */
 }
 .messy-box.half {
-    grid-column: span 3; /* half width */
+    grid-column: span 3; /* tier width */
 }
 
 /* Individual positions and styles */
